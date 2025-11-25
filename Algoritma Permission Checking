@@ -1,9 +1,0 @@
-function checkAccess(user, file, action):
-    roles = getUserRoles(user)
-    permissions = getInheritedPermissions(file)
-    for role in roles:
-        if (file, role, action) in ACLTable or (parent(file), role, action) inherited:
-            logAccess(user, file, action, "granted")
-            return "Access Granted"
-    logAccess(user, file, action, "denied")
-    return "Access Denied"
